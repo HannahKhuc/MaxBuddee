@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+        <link rel="stylesheet" href="../css/index.css">
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Hind);
+		
+            body {
+            font-family: 'Hind', sans-serif;
+            background-color:#f3f3f3;
+	        font-size: 17px;	
+            }	
+	    </style>
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAhB-Kx2-NBGGTSMhVzZUZ2-1dDzbMvuIk",
+            authDomain: "maxbuddee.firebaseapp.com",
+            databaseURL: "https://maxbuddee.firebaseio.com",
+            projectId: "maxbuddee",
+            storageBucket: "",
+            messagingSenderId: "544611626826",
+            appId: "1:544611626826:web:1eba22614246f6aa"
+        };
+        firebase.initializeApp(config);    
+        </script>
+    </head>
+    <body> 
+        <script>
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        </script>
+        <!-- The surrounding HTML is left untouched by FirebaseUI.
+            Your app may use that space for branding, controls and other customizations.-->
+        <div id="div1">
+            <div id = "rectangle1"> 
+                <img alt="logo" src="../picture/logo.png" width = "130" height = "115" >
+                <br>
+                <b>MAXBUDDEE SENIOR CARE ROBOT</b>
+                <br>
+            </div>
+            <div id = "rectangle2">
+                <div class="dropdown">
+                    <button class="dropbtn">About us 
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="example1.html">Link 1</a>
+                        <a href="example2.html">Link 2</a>
+                    </div>
+                </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Service 
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="example3.html">Link 4</a>
+                            <a href="example4.html">Link 5</a>
+                            <a href="example5.html">Link 6</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">News 
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="example.html">Link 7</a>
+                            <a href="example.html">Link 8</a>
+                        </div>
+                    </div> 
+                    <div class="dropdown">
+                        <button class="dropbtn">My Account
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="signuppage.html">Sign Up</a>
+                            <a href="signuppage.html">Login</a>
+                        </div>
+                    </div>
+              </div>   
+        </div>  
+        <br>
+        <br>
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+        <br>
+        <div id ="div6">
+            <div class ="column">Call Us Today On 1-888-098765  </div>
+            <div class ="column"> Email info@maxbuddee.com  </div>
+            <div id ="noBorder"><a href="example.html">More Info</a> </div> 
+        </div>
+        <div id="div7">
+            @2019 by MaxBuddee Senior Care Robot.
+        </div>
+
+        <script>
+        var uiConfig = {
+        callbacks: {
+            signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+            // User successfully signed in.
+            // Return type determines whether we continue the redirect automatically
+            // or whether we leave that to developer to handle.
+            return true;
+            },
+            uiShown: function() {
+            // The widget is rendered.
+            // Hide the loader.
+            document.getElementById('loader').style.display = 'none';
+            }
+        },
+        // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+        signInFlow: 'popup',
+        signInSuccessUrl: 'index.html',
+        signInOptions: [
+            // Leave the lines as is for the providers you want to offer your users.
+            //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+            //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+            //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+            firebase.auth.EmailAuthProvider.PROVIDER_ID,
+            //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+        ],
+        // Terms of service url.
+        tosUrl: 'index.html',
+        // Privacy policy url.
+        privacyPolicyUrl: 'index.html'
+        };
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+
+        </script>
+    </body>
+</html>
