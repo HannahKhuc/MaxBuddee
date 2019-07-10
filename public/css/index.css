@@ -177,7 +177,7 @@ display: block;
     font-size: 20pt;
     color:grey;
 }
-#noBorder a {
+#noBorder{
     font-size: 20pt;
     color:grey;
 }
