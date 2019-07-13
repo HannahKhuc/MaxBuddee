@@ -1,32 +1,29 @@
 
-body {
-    background-color:#f3f3f3;
-    
-}
 #rectangle1{
     background-color:#ffffff;
     width:50vw;
-    height:180px;
+    height:140px;
     text-align: center;
     font-size:15pt;
-    padding-top: 20px;
+    padding-top: 5px;
     color:grey;
 }
 #rectangle2{
     background-color:#ffffff;
     width:50vw;
-    height:180px;
+    height:140px;
     padding-top: 20px;
 }
 #div1 {
     display:flex;
     justify-content: space-around;
+
 }
 
 /* Links inside the navbar */
 .rectangle2 a {
 float: left;
-font-size: 16px;
+font-size: 15px;
 color: white;
 text-align: center;
 padding: 14px 16px;
@@ -41,7 +38,7 @@ overflow: hidden;
 
 /* Dropdown button */
 .dropdown .dropbtn {
-font-size: 16px; 
+font-size: 15px; 
 border: none;
 outline: none;
 color:grey;
@@ -89,97 +86,168 @@ display: block;
 #div2 {
     display: flex;
     flex-direction: row;
-    width:80vw;
-    height:470px;
-    margin-left: 10vw; 
+    width:88vw;
+    height:550px;
+    margin-left: 6vw; 
+    margin-right:6vw;
+}
+#background{
+    width:100vw;
+    height: 620px;
+    background-color: #404328;
 }
 #column1{
-    width:40vw;
+    width:44vw;
     background-color:#f9f9f9;
-    font-size:30pt;
-    color:grey;
+    font-size:27pt;
+    color:#743424;
     text-align: center;
     justify-content: center;
     line-height:50px;
+    margin-top:70px;
+    opacity:0.9;
+    padding-left:20px;
+    padding-right:20px;
 }
 #column2 {
-    background-image:url("../picture/maxbuddee2.png");
-    height:470px;
-    width:40vw;
+    background-image:url("../picture/maxbuddeefinal.png");
+    width:44vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    opacity: 0.9;
+    -ms-high-contrast-adjust: auto;
+    margin-top:70px;
 }
-
 #div3 {
     display: flex;
-    background-color:#87B1CB;
-    width:80vw;
-    height:400px;
-    margin-left: 10vw;   
+    flex-direction: row;
+    width:88vw;
+    height:70vh;
+    margin-left: 6vw;
+    margin-right: 6vw; 
+    justify-content: space-evenly; 
 }
 #div4 {
     display:flex;
     flex-direction: row;
-    background-color:#4A4A4A;
-    width:80vw;
+    background-color:#404328;
+    width:88vw;
     height:120px;
-    margin-left:10vw;
+    margin-left:6vw;
+    margin-right:6vw;
     align-items: center;
     justify-content: space-evenly;
 }
 #column4 {
-    background-color:#87B1CB;
+    background-color:#f3f3f3;
     width:30vw;
     height:40px;
     text-align: center;
-    font-size:15pt;
-    color:ghostwhite;
+    font-size:18pt;
+    color:#743424;
     padding-top: 15px;
 }
 #div5 {
     display:flex;
     flex-direction:row;
-    width:80vw;
-    height:300px;
-    background-color:#ffffff;
-    margin-left: 10vw;
+    width:88vw;
+    height:72vh;
+    margin-left: 6vw;
+    margin-right:6vw;
     justify-content: space-evenly;
 }
 #div6 {
     display:flex;
     flex-direction: row;
-    justify-content: space-between;
-    width:80vw;
+    justify-content: space-evenly;
+    width:88vw;
     height:100px;
     align-items: center;
-    margin-left: 10vw;
+    margin-left: 6vw;
 }
 #div7 {
-    background-color:#ffffff;
+    background-color:#f3f3f3;
     width: 100vw;
     height:100px;
     text-align:center;
-    line-height: 100px;   
+    padding-top:50px;
+    font-size:15pt;   
 }
 #column3{
-    width: 40vw;
-    font-size:30pt;
+    width: 44vw;
+    font-size:27pt;
     color: ghostwhite;
 }
+#column5{
+    width:44vw;
+    background-color: #743424;
+    margin-top:10px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    color:ghostwhite;
+    padding-top:30px;
+}
+#column5 p {
+    padding-left:35px;
+    padding-right:35px;
+    font-size: 15pt;
+    line-height: 30px;
+}
 #column6{
-    width:40vw;
+    width:44vw;
+    background-image:url("../picture/medicine.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    -ms-high-contrast-adjust: auto;
+    margin-top:10px;
+    margin-bottom:20px;
+    margin-left:10px;
 }
 .column{
     border-right: 2px solid grey;  
-    padding-right:50px;
-    font-size: 20pt;
+    padding-right:80px;
+    font-size: 18pt;
     color:grey;
 }
 #noBorder{
-    font-size: 20pt;
+    font-size: 18pt;
     color:grey;
 }
+#column7 {
+    background-image:url("../picture/peoplelaugh.png");
+    height:vh;
+    width:44vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    -ms-high-contrast-adjust: auto;
+    margin-top: 20px;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+#column8 {
+    background-color:#743424;
+    width:44vw;
+    margin-top: 20px;
+    margin-left:10px;
+    margin-bottom:10px;
+    color: ghostwhite;
+}
+#column8 p {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-size:15pt;
+    line-height: 30px;
+}
+p a{
+    color:ghostwhite;
+    font-size:15pt;
+}
+
+
     
 

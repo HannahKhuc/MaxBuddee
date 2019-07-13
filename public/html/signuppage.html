@@ -5,14 +5,12 @@
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
         <link rel="stylesheet" href="../css/index.css">
         <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            @import url(https://fonts.googleapis.com/css?family=Hind);
-		
-            body {
-            font-family: 'Hind', sans-serif;
-            background-color:#f3f3f3;
-	        font-size: 17px;	
-            }	
+            #modify {
+                background-color: #f3f3f3;
+                height:380px;
+                }	
 	    </style>
         <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
         <script>
@@ -49,13 +47,8 @@
                     </button>
                 </div>
                     <div class="dropdown">
-                        <button class="dropbtn">Product
+                        <button class="dropbtn" onclick="window.location.href='../html/product.html'">Product
                         </button>
-                        <div class="dropdown-content">
-                            <a href="example3.html">MaxBuddee</a>
-                            <a href="example4.html">MaxBuddee Plus</a>
-                            
-                        </div>
                     </div>
                     <div class="dropdown">
                         <button class="dropbtn" onclick="window.location.href='aboutus.html'">About Us
@@ -71,15 +64,18 @@
                     </div>
               </div>   
         </div>  
-        <br>
-        <br>
+        <div id="modify">
+        <br><br>
         <div id="firebaseui-auth-container"></div>
+        </div>
         <div id="loader">Loading...</div>
         <br>
         <div id ="div6">
-            <div class ="column">Call Us Today On 1-888-098765  </div>
+            <div class ="column"> Follow us:
+                <i class="fa fa-facebook-f" style="font-size:30px;color:#4267B2" onclick="window.location.href='index.html'"></i>       
+            </div>
             <div class ="column"> Email info@maxbuddee.com  </div>
-            <div id ="noBorder" onclick="window.location.href='index.html'">More Info 
+            <div id ="noBorder" onclick="window.location.href='index.html'">More info 
                 <i class='fas fa-angle-double-right' style='font-size:24px'></i>
              </div> 
         </div>
@@ -121,7 +117,6 @@
         };
         // The start method will wait until the DOM is loaded.
         ui.start('#firebaseui-auth-container', uiConfig);
-
         </script>
     </body>
 </html>
