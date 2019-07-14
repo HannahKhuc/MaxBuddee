@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>   
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <title> Profile Form</title>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAhB-Kx2-NBGGTSMhVzZUZ2-1dDzbMvuIk",
+        authDomain: "maxbuddee.firebaseapp.com",
+        databaseURL: "https://maxbuddee.firebaseio.com",
+        projectId: "maxbuddee",
+        storageBucket: "",
+        messagingSenderId: "544611626826",
+        appId: "1:544611626826:web:1eba22614246f6aa"
+    };
+    firebase.initializeApp(config);    
+    </script>
+</head>
+<body>
+    <script>src="../js/setup_firebase.js"</script>
+   <p>Enter additional profile information.</p>
+   <form id="profile" >
+      Set: <input type="text" id="set" name="set"><br>
+      Hobby: <input type="text" id="interest" name="interest"> <br>
+      Program: <input type="text" id="program" name="program"> <br><br>
+      <input type="submit">
+   </form>
+
+   <script>
+   document.getElementById('profile').addEventListener('submit', submitForm);
+
+   function submitForm(e) {
+       e.preventDefault();
+       var set = document.getElementById("set").value;
+       var interest = document.getElementById("interest").value;
+       var program = document.getElementById("program").value;
+
+       //console.log(set);
+       //console.log(interest);
+       //console.log(program);
+
+       var firebase = app_firebase;
+       
+       firebase.auth().onAuthStateChanged(function(user){
+        	console.log(set);
+          	console.log(interest);
+          	console.log(program);
+          	console.log(user.uid);
+          	
+          	//Update database with the profile info collected for the user
+          	var promise = firebase.database().ref('users/'+user.uid).update( {
+           	 "set": set,
+           	 "interest": interest,
+           	 "program": program
+         	 });
+          
+         	//When the databate update is done, then go to index.html
+       	 	promise.then(function() {
+       			window.location.href="index.html";
+       		});
+       });
+   };
+   </script>
+
+</body>
+</html>
+
+
