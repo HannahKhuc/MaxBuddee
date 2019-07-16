@@ -14,8 +14,8 @@
     margin-left: 6vw;
     margin-right:6vw;
     background-color: #f9f9f9;
-    padding: 20px;
     line-height:30px;
+    padding-top:35px;
 }
 .p1{
     font-size: 18pt;
@@ -35,7 +35,6 @@
     height:220px;
     margin-left:6vw;
     margin-right:6vw;
-    padding:20px;
 }
 p{
     padding-left: 50px;
@@ -48,7 +47,7 @@ p{
     margin-left: 6vw;
     margin-right:6vw;
     background-color: #f3f3f3;
-    padding: 20px;   
+    padding-top:35px; 
 }
 .div26 {
     display: flex;
@@ -60,7 +59,24 @@ p{
     padding-left: 100px;
     padding-top:35px;
 }
-.img{
-    opacity:0.1;
 
+#div27{
+    display:flex;
+    flex-direction: row;
+    background-color:#ffffff;
+    width:88vw;
+    height:270px;
+    margin-left:6vw;
+    margin-right:6vw;
+    box-shadow:1px 1px 3px 3px #f3f3f3;
+    font-size:15pt;
+    padding-top:25px;
+}
+#div28{
+    color: grey;
+    padding-left: 40px;
+    padding-right:10px;
+}
+#link{
+    padding-left: 70px;
 }

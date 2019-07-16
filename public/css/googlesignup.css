@@ -1,0 +1,28 @@
+#modify{
+    width:100vw;
+    height: 480px;
+    background-color: #f3f3f3;
+    padding-top:70px;
+
+}
+#signin{
+    width:50vw;
+    height: 400px;
+    background-color: #ffffff;
+    margin-left:25vw;
+    margin-right: 25vw;
+    color:grey;
+    padding:10px;
+    box-shadow:1px 1px 1px 2px lightgray;
+    
+}
+#p1{
+    font-size:25pt;
+    text-align: center;
+}
+#p2{
+    font-size:14pt;
+    text-align: center;
+    padding-left: 35px;
+    padding-right:35px;
+}

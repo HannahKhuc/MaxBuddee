@@ -172,7 +172,8 @@ display: block;
     height:100px;
     text-align:center;
     padding-top:50px;
-    font-size:15pt;   
+    font-size:15pt; 
+    color:grey;  
 }
 #column3{
     width: 44vw;

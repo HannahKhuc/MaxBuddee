@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>googlesignup</title>
+        <link rel="stylesheet" href="../css/googlesignup.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <!-- your project snippet here -->
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css">       
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAhB-Kx2-NBGGTSMhVzZUZ2-1dDzbMvuIk",
+            authDomain: "maxbuddee.firebaseapp.com",
+            databaseURL: "https://maxbuddee.firebaseio.com",
+            projectId: "maxbuddee",
+            storageBucket: "",
+            messagingSenderId: "544611626826",
+            appId: "1:544611626826:web:1eba22614246f6aa"
+        };
+        firebase.initializeApp(config);    
+        </script>
+    </head> 
+    <body>
+        <div id="div1">
+            <div id = "rectangle1"> 
+                <img alt="logo" src="../picture/logo.png" width = "130" height = "115" >
+                <br>
+                <b>MAXBUDDEE SENIOR CARE ROBOT</b>
+                <br>
+            </div>
+            <div id = "rectangle2">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="window.location.href='index.html'">Home 
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="window.location.href='../html/product.html'">Product
+                    </button>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="window.location.href='aboutus.html'">About Us
+                    </button>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">My Account
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="signuppage.html">Sign Up</a>
+                        <a href="signuppage.html">Login</a>
+                    </div>
+                </div>
+            </div>   
+        </div>  
+        <div id="modify"> 
+            <div id="signin">
+                <br><br>
+            <p id="p1"><b>Welcome To MaxBuddee<b></p>
+            <p id="p2">Sign in to get personalized story recommendations,
+            follow authors and topics you love, and interact with stories.
+            </p>
+            <br> 
+            <div id="firebaseui-auth-container"></div>
+            </div>
+        </div>                
+        <!--   <div id="quickstart-sign-in"></div> -->
+        <div id ="div6">
+                <div class ="column"> Follow us:
+                    <i class="fa fa-facebook-f" style="font-size:30px;color:#4267B2" onclick="window.location.href='index.html'"></i>       
+                </div>
+                <div class ="column"> Email info@maxbuddee.com  </div>
+                <div id ="noBorder" onclick="window.location.href='index.html'">More info 
+                    <i class='fas fa-angle-double-right' style='font-size:24px'></i>
+                </div> 
+            </div>
+            <div id="div7">
+                @2019 by MaxBuddee Senior Care Robot.
+            </div>
+
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script>
+        var provider = new firebase.auth.GoogleAuthProvider();
+        
+            
+        firebase.auth().getRedirectResult().then(function(result) {
+          if (result.credential) {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // ...
+          }
+          // The signed-in user info.
+          var user = result.user;
+        }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // The email of the user's account used.
+          var email = error.email;
+          // The firebase.auth.AuthCredential type that was used.
+          var credential = error.credential;
+          // ...
+        });
+        </script>
+ 
+        <script>
+    //        firebase.auth().onAuthStateChanged(function(user) {
+    //           if(user){
+    //               window.location.href = "../html/googlesignup.html";
+    //           }
+    //      });
+            
+	       // Initialize the FirebaseUI Widget using Firebase.
+	        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+            var uiConfig = {
+              callbacks: {
+                signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+                  // User successfully signed in.
+                  // Return type determines whether we continue the redirect automatically
+                  // or whether we leave that to developer to handle.
+                  return true;
+                },
+                uiShown: function() {
+                  // The widget is rendered.
+                  // Hide the loader.
+                  document.getElementById('loader').style.display = 'none';
+                }
+              },
+              // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+              signInFlow: 'redirect',
+              signInSuccessUrl: '../html/index.html',
+              signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+ //              firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+ //               firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+//                firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+//               firebase.auth.PhoneAuthProvider.PROVIDER_ID
+              ],
+              // Terms of service url.
+              //tosUrl: './html/Home.html',
+              // Privacy policy url.
+              //privacyPolicyUrl: './html/Home.html'
+            };
+            // The start method will wait until the DOM is loaded.
+            ui.start('#firebaseui-auth-container', uiConfig);
+            </script>
+    </body>
+</html>
+
+
