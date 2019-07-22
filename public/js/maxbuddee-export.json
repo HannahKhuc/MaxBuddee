@@ -1,0 +1,38 @@
+{
+  "article_group" : {
+    "article" : {
+      "article1" : {
+        "body" : "this is the body of the article",
+        "date_edited" : 1333065600000,
+        "slug_name" : "this is an article AI",
+        "title" : "this is an Article",
+        "uid" : "user1"
+      },
+      "article2" : {
+        "body" : "this is a new body",
+        "date_edited" : 1333065600000,
+        "slug_name" : "article on firebase",
+        "title" : "Article on Firebase",
+        "uid" : "user2"
+      },
+      "article3" : {
+        "body" : "this is a new body",
+        "date_edited" : 1333065600000,
+        "slug_name" : "article on firebase",
+        "title" : "Article on Firebase",
+        "uid" : "user2"
+      }
+    },
+    "article_list" : {
+      "article1" : {
+        "published" : 1459296000000
+      },
+      "article2" : {
+        "draft" : 1333065600000
+      },
+      "article3" : {
+        "published" : 1461974400000
+      }
+    }
+  }
+}

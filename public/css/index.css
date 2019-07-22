@@ -108,6 +108,7 @@ display: block;
     opacity:0.9;
     padding-left:20px;
     padding-right:20px;
+    padding-top: 65px;
 }
 #column2 {
     background-image:url("../picture/maxbuddeefinal.png");
@@ -118,6 +119,18 @@ display: block;
     opacity: 0.9;
     -ms-high-contrast-adjust: auto;
     margin-top:70px;
+}
+#letter{
+    width:86vw;
+    height:750px;
+    margin-left:6vw;
+    background-color:#f3f3f3;
+    font-size:15pt;
+    padding-left:35px;
+    padding-top:35px;
+    margin-top: 20px;
+    line-height:30px;
+
 }
 #div3 {
     display: flex;
@@ -166,14 +179,14 @@ display: block;
     align-items: center;
     margin-left: 6vw;
 }
-#div7 {
-    background-color:#f3f3f3;
+#div7 { 
+    background-color:#404328;
     width: 100vw;
-    height:100px;
+    height:200px;
     text-align:center;
-    padding-top:50px;
+    padding-top:15px;
     font-size:15pt; 
-    color:grey;  
+    color:ghostwhite;  
 }
 #column3{
     width: 44vw;
@@ -247,6 +260,16 @@ display: block;
 p a{
     color:ghostwhite;
     font-size:15pt;
+}
+#video {
+    width:42vw;
+    background-color:#404328;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+#image{
+    float:left;
+    margin-right:30px;
 }
 
 

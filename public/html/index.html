@@ -11,7 +11,7 @@
             <div id = "rectangle1"> 
             <img alt="logo" src="../picture/logo.png" width = "130" height = "115" >
             <br>
-            <b>MAXBUDDEE SENIOR CARE ROBOT</b>
+            <b>MAXBUDDEE THE SENIOR CARE ROBOT</b>
             </div>
             <div id = "rectangle2">
                 <div class="dropdown">
@@ -27,23 +27,52 @@
                     </button>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">My Account
+                    <button class="dropbtn" onclick="window.location.href='googlesignup.html'">My Account
                      </button>
-                    <div class="dropdown-content">
+<!--                 <div class="dropdown-content">
                         <a href="googlesignup.html">Sign Up</a>
                          <a href="googlesignup.html">Login</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>   
         </div> 
         <div id=background>
         <div id="div2">
             <div id="column1">
-                <br><br><br>  
-                <b>MAXBUDDEE SENIOR CARE ROBOT</b>  
+                <div id="video">
+                    <video width="480" height="270" controls>
+                        <source src="../picture/MaxBuddee_v2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>    
             </div>
             <div id="column2"></div>
         </div>
+        </div>
+        <div id="letter">
+            <div id= "image">
+        <img src="../picture/BenKhuc.jpg" alt="Anh Nguyen, Founder of MaxBuddee" width="200px" height="204px">
+            </div>
+        <br><br>
+        <b>Dear Senior and their beloved children:</b>
+        <br>
+        <p>I am the Founder and CEO of MaxBuddee, as a daughter of 80s y.o.seniors, first of all, I would like to 
+        thank my parents, for their love and support throughout my life. Thank you both for giving me the strength
+        to have such achievements. I'd love to dedicate this project to my parents and those who beloved children.</p>
+        <p>"To care for those who once cared for us is one of the highest honors." <br>
+        - Tia Walker, The Inspired Caregiver: Finding Joy While Caring for Those You love. </p>
+        <p>Caring our parents and making their lives more worthful require love, patience, knowledge and time, our
+        parents need not only physical means but also proper medical care and social activities,thanks to technology
+        development, we are now able to build a social robot that can help us to take care of our parents while we
+        are at a distance or it can be a caregiver to to any senior.</p>
+        <p>I am also very pleased to introduce and share our work with you on this website and look forward to your support. 
+        During this Research and Development phase, I'd like to call for your contributions to identify your issues and 
+        needs so that we can build a very useful robot for you and your parents.</p>
+        <p>I hope that with our products, seniors can live more healthy, useful and make everyday worthfully.</p>
+        <p>Let's built MaxBuddee together.</p>
+       <p><b>Anh Nguyen</b><br>
+        Founder & CEO MaxBuddee
+        <p>
         </div>
         <div id="div3">
             <div id="column7"></div>
@@ -77,13 +106,17 @@
                 <i class="fa fa-facebook-f" style="font-size:30px;color:#4267B2"></i>
             </div>
             <div class ="column"> Email info@maxbuddee.com  </div>
-            <div id ="noBorder" onclick="window.location.href='index.html'">More Info 
+            <div id ="noBorder" onclick="window.location.href='../html/Product.html'">More Info 
                 <i class='fas fa-angle-double-right' style='font-size:24px'></i>
              </div>
         </div>
         <div id="div7">
+            <p onclick="window.location.href='../html/terms.html'">Terms of Service</p>
+            <p onclick="window.location.href='../html/privacy.html'"> Privacy Policy</p>
+            <p onclick="window.location.href='../html/career.html'">Career Opportunity</p>
                 @2019 by MaxBuddee Senior Care Robot.
         </div>
         <script>src="../js/setup_firebase.js"</script>
+        <script src="../js/create_user.js"></script>
     </body>
 </html>
